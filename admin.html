@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solaris Power - Área Administrativa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logo.jpg" alt="Solaris Power Logo">
+            </div>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul>
+                <li><a href="index.html">Voltar ao Site</a></li>
+                <li><a href="#" id="logout-btn" style="display: none;">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="admin-login" class="admin-section">
+            <div class="container">
+                <h1>Área Administrativa</h1>
+                <p>Acesso restrito aos administradores do site.</p>
+                
+                <div class="login-container">
+                    <form id="login-form">
+                        <div class="form-group">
+                            <label for="admin-password">Senha de Administrador</label>
+                            <input type="password" id="admin-password" required>
+                        </div>
+                        <button type="submit" class="submit-btn">Entrar</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section id="admin-dashboard" class="admin-section" style="display: none;">
+            <div class="container">
+                <h1>Painel Administrativo</h1>
+                <p>Bem-vindo à área administrativa da Solaris Power.</p>
+                
+                <div class="admin-tabs">
+                    <button class="tab-btn active" data-tab="clients">Lista de Clientes</button>
+                    <button class="tab-btn" data-tab="export">Exportar Dados</button>
+                </div>
+                
+                <div class="tab-content" id="clients-tab">
+                    <h2>Lista de Clientes</h2>
+                    <div class="admin-controls">
+                        <div class="search-box">
+                            <input type="text" id="search-clients" placeholder="Buscar clientes...">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <button id="refresh-list" class="action-btn"><i class="fas fa-sync-alt"></i> Atualizar</button>
+                    </div>
+                    
+                    <div class="clients-list-container show">
+                        <table id="admin-clients-list" class="clients-list">
+                            <!-- A lista de clientes será gerada dinamicamente aqui -->
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="export-tab" style="display: none;">
+                    <h2>Exportar Dados</h2>
+                    <p>Exporte a lista de clientes para um arquivo CSV.</p>
+                    <button id="export-csv" class="action-btn"><i class="fas fa-file-export"></i> Exportar para CSV</button>
+                    <div id="export-result"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo.jpg" alt="Solaris Power Logo">
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <p>&copy; 2025 Solaris Power. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>

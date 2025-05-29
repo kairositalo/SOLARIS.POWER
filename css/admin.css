@@ -1,0 +1,233 @@
+/* Estilos para a área administrativa */
+.admin-section {
+    min-height: 100vh;
+    padding-top: 100px;
+}
+
+.login-container {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 40px;
+    max-width: 500px;
+    margin: 40px auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.admin-tabs {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 10px;
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    color: var(--light-text);
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+    color: var(--primary-color);
+}
+
+.tab-btn.active {
+    color: var(--primary-color);
+}
+
+.tab-btn.active::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
+    bottom: -11px;
+    left: 0;
+}
+
+.tab-content {
+    margin-top: 30px;
+}
+
+.admin-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.search-box {
+    position: relative;
+    flex: 1;
+    max-width: 400px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 12px 40px 12px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--light-text);
+    font-size: 1rem;
+}
+
+.search-box i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--primary-color);
+}
+
+.action-btn {
+    background-color: var(--primary-color);
+    color: var(--dark-bg);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.action-btn:hover {
+    background-color: #fff;
+    color: var(--primary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(247, 164, 0, 0.3);
+}
+
+.action-btn i {
+    font-size: 0.9rem;
+}
+
+.clients-list-container {
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.clients-list {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.clients-list th, 
+.clients-list td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.clients-list th {
+    color: var(--primary-color);
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+    background-color: rgba(10, 10, 20, 0.9);
+    z-index: 10;
+}
+
+.clients-list tr:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.client-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.client-actions button {
+    background: none;
+    border: none;
+    color: var(--light-text);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.client-actions button:hover {
+    color: var(--primary-color);
+}
+
+.client-actions .delete-btn:hover {
+    color: #e74c3c;
+}
+
+#export-result {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    display: none;
+}
+
+#export-result.success {
+    background-color: rgba(46, 204, 113, 0.2);
+    border: 1px solid rgba(46, 204, 113, 0.5);
+    color: #2ecc71;
+    display: block;
+}
+
+#export-result.error {
+    background-color: rgba(231, 76, 60, 0.2);
+    border: 1px solid rgba(231, 76, 60, 0.5);
+    color: #e74c3c;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .admin-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .search-box {
+        max-width: 100%;
+    }
+    
+    .clients-list th, 
+    .clients-list td {
+        padding: 10px 8px;
+        font-size: 0.9rem;
+    }
+    
+    .tab-btn {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .login-container {
+        padding: 20px;
+    }
+    
+    .clients-list-container {
+        padding: 10px;
+    }
+    
+    .clients-list {
+        font-size: 0.8rem;
+    }
+    
+    .clients-list th, 
+    .clients-list td {
+        padding: 8px 5px;
+    }
+}

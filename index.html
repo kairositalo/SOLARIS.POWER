@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solaris Power - Energia Solar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logo.jpg" alt="Solaris Power Logo">
+            </div>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#quem-somos">Quem Somos</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#calculadora">Calculadora</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="admin.html" class="admin-link"><i class="fas fa-lock"></i> Área Restrita</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="container">
+                <h1>Transforme a luz do sol em economia</h1>
+                <p>Soluções completas em energia solar para residências e empresas.</p>
+                <a href="#contato" class="cta-button">Solicite um Orçamento</a>
+            </div>
+        </section>
+
+        <section id="quem-somos">
+            <div class="container">
+                <h2>Quem Somos</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>A Solaris Power é uma empresa especializada em soluções de energia solar, comprometida em fornecer alternativas energéticas sustentáveis e econômicas para clientes residenciais e empresariais.</p>
+                        <p>Nossa missão é democratizar o acesso à energia limpa e renovável, contribuindo para um futuro mais sustentável e ajudando nossos clientes a reduzirem seus custos com energia elétrica.</p>
+                        <h3>Nossos Valores</h3>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Sustentabilidade</li>
+                            <li><i class="fas fa-check-circle"></i> Inovação</li>
+                            <li><i class="fas fa-check-circle"></i> Excelência técnica</li>
+                            <li><i class="fas fa-check-circle"></i> Atendimento personalizado</li>
+                            <li><i class="fas fa-check-circle"></i> Compromisso com resultados</li>
+                        </ul>
+                    </div>
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Equipe Solaris Power">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicos">
+            <div class="container">
+                <h2>Nossos Serviços</h2>
+                <p>Oferecemos soluções completas em energia solar para diversos perfis de clientes.</p>
+                <div class="services-container">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3>Residencial</h3>
+                        <p>Sistemas fotovoltaicos personalizados para residências, reduzindo sua conta de luz em até 95%.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3>Comercial</h3>
+                        <p>Soluções para empresas de todos os portes, com foco em redução de custos operacionais e sustentabilidade.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <h3>Industrial</h3>
+                        <p>Projetos de grande escala para indústrias, com alta eficiência energética e retorno garantido.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3>Manutenção</h3>
+                        <p>Serviços de manutenção preventiva e corretiva para sistemas fotovoltaicos já instalados.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="calculadora">
+            <div class="container">
+                <h2>Calculadora Solar</h2>
+                <p>Descubra quanto você pode economizar com energia solar.</p>
+                <div class="calculator">
+                    <label for="gasto-mensal">Seu gasto mensal com energia (R$):</label>
+                    <input type="number" id="gasto-mensal" placeholder="Ex: 300">
+                    <button onclick="calcularEconomia()">Calcular Economia</button>
+                    <div id="resultado-economia">
+                        <!-- O resultado será exibido aqui -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="blog">
+            <div class="container">
+                <h2>Blog Solaris Power</h2>
+                <p>Dicas, notícias e informações sobre energia solar.</p>
+                <div class="blog-container">
+                    <div class="blog-post">
+                        <div class="blog-image">
+                            <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Energia Solar Residencial">
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-date">12 de Maio, 2025</div>
+                            <h3 class="blog-title">Como funciona a energia solar residencial?</h3>
+                            <p class="blog-excerpt">Entenda os princípios básicos dos sistemas fotovoltaicos e como eles podem beneficiar sua casa.</p>
+                            <a href="#" class="read-more">Ler mais</a>
+                        </div>
+                    </div>
+                    <div class="blog-post">
+                        <div class="blog-image">
+                            <img src="https://images.unsplash.com/photo-1548345680-f5475ea5df84?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Economia com Energia Solar">
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-date">5 de Maio, 2025</div>
+                            <h3 class="blog-title">Economia real: quanto você pode economizar?</h3>
+                            <p class="blog-excerpt">Análise detalhada do retorno financeiro e economia a longo prazo com sistemas solares.</p>
+                            <a href="#" class="read-more">Ler mais</a>
+                        </div>
+                    </div>
+                    <div class="blog-post">
+                        <div class="blog-image">
+                            <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Manutenção de Painéis Solares">
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-date">28 de Abril, 2025</div>
+                            <h3 class="blog-title">Manutenção de painéis solares: o que você precisa saber</h3>
+                            <p class="blog-excerpt">Dicas essenciais para manter seu sistema fotovoltaico funcionando com eficiência máxima.</p>
+                            <a href="#" class="read-more">Ler mais</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato">
+            <div class="container">
+                <h2>Entre em Contato</h2>
+                <p>Estamos prontos para ajudar você a economizar com energia solar.</p>
+                <div class="contact-container">
+                    <div class="contact-form">
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <label for="nome">Nome</label>
+                                <input type="text" id="nome" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="telefone">Telefone</label>
+                                <input type="tel" id="telefone">
+                            </div>
+                            <div class="form-group">
+                                <label for="mensagem">Mensagem</label>
+                                <textarea id="mensagem" required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">Enviar Mensagem</button>
+                        </form>
+                        
+                        <!-- Lista de Clientes -->
+                        <div id="clients-list-container" class="clients-list-container">
+                            <h3>Lista de Clientes</h3>
+                            <table id="clients-list" class="clients-list">
+                                <!-- A lista de clientes será gerada dinamicamente aqui -->
+                            </table>
+                        </div>
+                    </div>
+                    <div class="contact-info">
+                        <h3>Informações de Contato</h3>
+                        <div class="contact-detail">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Endereço</h4>
+                                <p>R. Francisco Glicério, 438 - Maraponga, Fortaleza - CE</p>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Telefone</h4>
+                                <p>(85) 99424-3518</p>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <p>Italoamorim.eng@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="contact-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>WhatsApp</h4>
+                                <p>(85) 99424-3518</p>
+                            </div>
+                        </div>
+                        <div class="contact-map">
+                            <!-- Mapa seria inserido aqui -->
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4722.324420420874!2d-38.56805872429227!3d-3.797210843527582!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c74f007afb9e87%3A0x43d76099350653f8!2sSOLARIS%20POWER!5e1!3m2!1spt-BR!2sbr!4v1748440581665!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo.jpg" alt="Solaris Power Logo">
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <p>&copy; 2025 Solaris Power. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
